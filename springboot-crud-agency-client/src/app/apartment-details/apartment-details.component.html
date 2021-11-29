@@ -1,0 +1,35 @@
+<h2>Apartment Details</h2> 
+
+<hr/>
+<div *ngIf="apartment">
+  <div>
+    <label><b>Name: </b></label> {{apartment.name}}
+  </div>
+  <div>
+    <label><b>Location: </b></label> {{apartment.location}}
+  </div>
+  <div>
+    <label><b>No. Of Bedrooms: </b></label> {{apartment.noOfBeds}}
+  </div>  
+  <div>
+    <label><b>No Of Bathrooms: </b></label> {{apartment.noOfBaths}}
+  </div>  
+  <div>
+    <label><b>Total Area: </b></label> {{apartment.totalArea}}
+  </div>  
+  <div>
+    <label><b>Area Of Each Bedroom: </b></label> {{apartment.areaOfBed}}
+  </div>  
+  <div>
+    <label><b>Area Of Each Bathroom: </b></label> {{apartment.areaOfBath}}
+  </div>  
+  <div>
+    <label><b>Price: </b></label> {{apartment.price}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Apartment List</button><br>
+
+

@@ -1,0 +1,39 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Apartment List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" style="display: block; overflow-x: auto;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Location</th>
+          <th>No. Of Bedrooms</th>
+          <th>No Of Bathrooms</th>
+          <th>Total Area</th>
+          <th>Area Of Each Bedroom</th>
+          <th>Area Of Each Bathroom</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let apartment of apartments | async">
+          <td style="min-width: 200px;">{{apartment.name}}</td>
+          <td style="min-width: 200px;">{{apartment.location}}</td>
+          <td>{{apartment.noOfBeds}}</td>
+          <td>{{apartment.noOfBaths}}</td>
+          <td>{{apartment.totalArea}}</td>
+          <td>{{apartment.areaOfBed}}</td>
+          <td>{{apartment.areaOfBath}}</td>
+          <td>€{{apartment.price | number:'1.0-2'}}</td>
+          <td style="min-width: 280px;"><button (click)="deleteApartment(apartment.id)" class="btn btn-danger">Delete</button>
+              <button (click)="updateApartment(apartment.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="apartmentDetails(apartment.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

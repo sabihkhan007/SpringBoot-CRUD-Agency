@@ -1,0 +1,56 @@
+<h3>Update Apartment</h3>
+<div>
+  <form (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="apartment.name" name="name">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="name">Location</label>
+        <input type="text" class="form-control" id="location" required [(ngModel)]="apartment.location" name="location">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="name">No. Of Bedrooms</label>
+        <input type="number" class="form-control" id="noOfBeds" required [(ngModel)]="apartment.noOfBeds" name="noOfBeds">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="name">No Of Bathrooms</label>
+        <input type="number" class="form-control" id="noOfBaths" required [(ngModel)]="apartment.noOfBaths"
+          name="noOfBaths">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="name">Total Area</label>
+        <input type="number" class="form-control" id="totalArea" required [(ngModel)]="apartment.totalArea"
+          name="totalArea">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="name">Area Of Each Bedroom</label>
+        <input type="number" class="form-control" id="areaOfBed" required [(ngModel)]="apartment.areaOfBed"
+          name="areaOfBed">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="name">Area Of Each Bathroom</label>
+        <input type="number" class="form-control" id="areaOfBath" required [(ngModel)]="apartment.areaOfBath"
+          name="areaOfBath">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="name">Price</label>
+        <input type="text" class="form-control" id="price" required [(ngModel)]="apartment.price" name="price">
+      </div>
+    </div>
+
+    <button (click)="gotoList()" class="btn btn-primary">Back to Apartment List</button>
+    <button style="margin-left: 10px;" type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
